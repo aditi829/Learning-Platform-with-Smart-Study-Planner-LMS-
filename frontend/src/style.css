@@ -1,0 +1,277 @@
+
+/* =========================
+   GLOBAL
+========================= */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #eef2f7;
+  color: #0f172a;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.app-layout {
+  display: flex;
+}
+
+/* MAIN CONTENT WRAPPER */
+.main-content {
+  margin-left: 220px;
+  width: 100%;
+  background: #eef2f7;
+  min-height: 100vh;
+}
+
+/* PAGE CARD (IMPORTANT FIX) */
+.page {
+  padding: 24px;
+  margin: 16px;
+  background: #f8fafc;
+  min-height: calc(100vh - 32px);
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 1px #e2e8f0;
+}
+
+/* =========================
+   SIDEBAR (PROFESSIONAL DARK)
+========================= */
+
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #0b1220;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #1f2937;
+}
+
+.sidebar .logo {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  display: block;
+  transition: 0.2s;
+}
+
+.sidebar a:hover {
+  background: #1e293b;
+  color: white;
+}
+
+/* LOGOUT BUTTON (BLACK PROFESSIONAL) */
+.logout-btn {
+  background: #111827;
+  color: white;
+  border: 1px solid #1f2937;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.logout-btn:hover {
+  background: #000000;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+.container {
+  max-width: 420px;
+  margin: 80px auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+input,
+select {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus,
+select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+button {
+  padding: 10px;
+  background: #0f172a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #000000;
+}
+
+/* =========================
+   GRID & CARDS
+========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+/* =========================
+   DASHBOARD CLEAN UI
+========================= */
+
+/* HEADER */
+.dashboard-header h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.dashboard-header p {
+  margin: 4px 0 16px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* KPI GRID */
+.kpi-grid-clean {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.kpi-clean {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.kpi-clean span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.kpi-clean h3 {
+  margin: 6px 0 0;
+  font-size: 20px;
+}
+
+/* DASHBOARD LAYOUT */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+}
+
+/* CARD */
+.clean-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* SUMMARY */
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .main-content {
+    margin-left: 180px;
+  }
+
+  .kpi-grid-clean {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ENSURE SAME WIDTH FEEL AS TASKS & COURSES */
+.page {
+  padding: 24px;
+  background: #f8fafc;
+  min-height: 100vh;
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 1px #e2e8f0;
+}
+
+/* UNIFY HEADING STYLE */
+.page h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+html, body {
+  height: 100%;
+  background: #eef2f7;
+  overflow-x: hidden;
+}
+
+.main-content {
+  margin-left: 220px;
+  width: 100%;
+  background: #eef2f7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+}
